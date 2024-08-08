@@ -4,7 +4,7 @@
 
 a {text-decoration: none; color: black;}
 
-
+body#top {overflow: hidden;}
 
 /***********************header***************************/
 header {
@@ -12,27 +12,31 @@ header {
     background: white;
 }
 
+header>div {display:flex; }
+#outer {flex:1; padding:20px; }
 
-header button.material-symbols-outlined {
-    margin-bottom: 20px;
-    font-size: 2rem; border: none; 
+header>div> button.material-symbols-outlined {
+    background: none; font-size:2rem; margin-bottom:20px; border:none; padding:20px;
 }
 
 header nav {
-    background-color: rgba(0,0,0,0.7); height: 0vh;
+    background-color: rgba(0,0,0,0.7); height: 100vh;
     left: 0; width: 100%;
-    position: absolute; transition: all 0.7s; overflow: hidden;
+    position: absolute; transition: all 0.7s; /* overflow: hidden; */
 }
 
-.slide {
-    height: 100vh; padding: 50px;
-}
-
-/* header:hover nav {
-    height: 100vh; padding: 50px;
-} */
 
 header nav a {
     display: block; color: white; font-size: 1.5rem; font-weight: bold;
     text-align: center; margin: 30px;
+}
+
+/*********************/
+
+footer {
+    background: black; padding:30px; text-align: center;
+    position:fixed; left:0; bottom:0; width:100%;
+}
+footer nav a {
+    color:white; padding:5px; margin:5px;
 }

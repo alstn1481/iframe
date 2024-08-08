@@ -1,22 +1,26 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 
+    const outer = document.getElementById("outer");
     const navBtn = document.querySelector("header button");
-    const nav = document.querySelector("nav");
+    const nav =    document.querySelector("header nav");
     const iframe = window.parent.document.getElementById("header");
 
-   
-
+    let i = 0;
     const navSlide = () => {
-        nav.classList.add("slide");
-    };
+        if(i == 0) {
+            iframe.classList.add("slide");
+            navBtn.textContent = "close";
+            i++;
+        } else      navHide();            
+    }
 
+    const navHide = () => {
+        iframe.classList.remove("slide");
+        navBtn.textContent = "menu";
+        i = 0;
+    }
 
-
-
-
-
-
-
-    navBtn.addEventListener("click", navSlide)
+    navBtn.addEventListener("click" , navSlide );
+    outer.addEventListener("click", navHide);
 
 });///////////////////////전체 끝
