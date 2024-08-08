@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; box-sizing: border-box;}
+
+a {text-decoration: none; color: black;}
+
+
+
+/***********************header***************************/
+header {
+    text-align: right; padding: 20px; position: relative;
+    background: white;
+}
+
+
+header button.material-symbols-outlined {
+    margin-bottom: 20px;
+    font-size: 2rem; border: none; 
+}
+
+header nav {
+    background-color: rgba(0,0,0,0.7); height: 0vh;
+    left: 0; width: 100%;
+    position: absolute; transition: all 0.7s; overflow: hidden;
+}
+
+.slide {
+    height: 100vh; padding: 50px;
+}
+
+/* header:hover nav {
+    height: 100vh; padding: 50px;
+} */
+
+header nav a {
+    display: block; color: white; font-size: 1.5rem; font-weight: bold;
+    text-align: center; margin: 30px;
+}
